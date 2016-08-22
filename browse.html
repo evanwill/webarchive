@@ -1,0 +1,30 @@
+---
+layout: default
+title: Browse Collections
+---
+<div class="page">
+    
+    <div class="pageheader">
+        <h3 class="subpagetitle"><a class="arrow" href="about.html">«</a> Browse Collections <a href="years/argonaut1898.html">»</a></h3>
+    </div>
+        
+    <div class="columnwrapper">
+
+        <ul class="yearslist">
+            {% for item in site.data.webarchivecollections %}
+            
+            <li>
+                <a href="{{ item.url }}">
+                <img src="{{ item.img }}" alt="{{ item.title }}"></a>
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.description }}</p>
+                <a href="{{ item.url }}">Visit</a>
+            </li>
+            
+            {% endfor %}
+            
+        </ul>
+
+    </div>
+
+</div>
